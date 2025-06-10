@@ -89,29 +89,29 @@
     - [x] Write failing unit test for HEX to HSL conversion.
     - [x] Implement `ParseToHsl` method to make the test pass.
     - [x] Refactor and add tests for edge cases (black, white) and invalid inputs.
-- [x] **Step 1.2: Implement Music Theory Service**
-    - [x] Define `IMusicTheoryService` interface and `MusicTheoryService` class.
-    - [x] Write failing unit tests for Hue to Pitch Class mapping for all 12 segments.
-    - [x] Write failing unit tests for Saturation/Lightness to Mode/Extension mapping based on defined thresholds.
-    - [x] Implement the methods to make tests pass.
-- [x] **Step 1.3: Implement Chord Builder**
-    - [x] Define `IChordBuilder` interface and `ChordBuilder` class.
-    - [x] Write failing unit tests for generating MIDI notes and frequencies for various chords (e.g., C major, E♭ minor-7).
-    - [x] Implement the chord construction and frequency calculation logic.
-- [x] **Step 1.4: Dependency Injection Setup**
-    - [x] Register `IColorParser`, `IMusicTheoryService`, and `IChordBuilder` as services in `Program.cs`.
+- [ ] **Step 1.2: Implement Music Theory Service**
+    - [ ] Define `IMusicTheoryService` interface and `MusicTheoryService` class.
+    - [ ] Write failing unit tests for Hue to Pitch Class mapping for all 12 segments.
+    - [ ] Write failing unit tests for Saturation/Lightness to Mode/Extension mapping based on defined thresholds.
+    - [ ] Implement the methods to make tests pass.
+- [ ] **Step 1.3: Implement Chord Builder**
+    - [ ] Define `IChordBuilder` interface and `ChordBuilder` class.
+    - [ ] Write failing unit tests for generating MIDI notes and frequencies for various chords (e.g., C major, E♭ minor-7).
+    - [ ] Implement the chord construction and frequency calculation logic.
+- [ ] **Step 1.4: Dependency Injection Setup**
+    - [ ] Register `IColorParser`, `IMusicTheoryService`, and `IChordBuilder` as services in `Program.cs`.
 
 ### Phase 2: API Layer Development & Testing
-- [x] **Step 2.1: Implement API Endpoints**
-    - [x] Implement `POST /convert` endpoint, injecting and using the core logic services.
-    - [x] Implement `GET /chords/{pitch}/{quality}` utility endpoint.
-    - [x] Implement `GET /health` endpoint using `AddHealthChecks`.
-- [x] **Step 2.2: Implement Input Validation and Error Handling**
-    - [x] Ensure services throw `ArgumentException` for invalid inputs.
-    - [x] Add try-catch blocks in API handlers to return `Results.BadRequest()` or `Results.Problem()` for errors.
-- [x] **Step 2.3: Integrate OpenAPI (Swagger)**
-    - [x] Ensure `AddEndpointsApiExplorer` and `AddSwaggerGen` are configured.
-    - [x] Configure SwaggerUI for a better development experience.
+- [ ] **Step 2.1: Implement API Endpoints**
+    - [ ] Implement `POST /convert` endpoint, injecting and using the core logic services.
+    - [ ] Implement `GET /chords/{pitch}/{quality}` utility endpoint.
+    - [ ] Implement `GET /health` endpoint using `AddHealthChecks`.
+- [ ] **Step 2.2: Implement Input Validation and Error Handling**
+    - [ ] Ensure services throw `ArgumentException` for invalid inputs.
+    - [ ] Add try-catch blocks in API handlers to return `Results.BadRequest()` or `Results.Problem()` for errors.
+- [ ] **Step 2.3: Integrate OpenAPI (Swagger)**
+    - [ ] Ensure `AddEndpointsApiExplorer` and `AddSwaggerGen` are configured.
+    - [ ] Configure SwaggerUI for a better development experience.
 - [ ] **Step 2.4: Comprehensive Testing**
     - [ ] Add Property-Based Tests with FsCheck for color conversion consistency and chord structure invariants.
     - [ ] Add Integration Tests with `WebApplicationFactory` to test the full request pipeline for all endpoints.
