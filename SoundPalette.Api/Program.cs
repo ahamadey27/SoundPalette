@@ -15,6 +15,27 @@ builder.Services.AddScoped<IChordBuilder, ChordBuilder>();
 
 var app = builder.Build();
 
+// Map the POST /convert endpoint
+app.MapPost("/convert", (ColorInputModel input, IColorParser colorParser, IMusicTheoryService musicTheory, IChordBuilder chordBuilder) =>
+{
+    // Parse HEX to HSL
+    var hsl = colorParser.ParseToHsl(input.ColorValue);
+    // Map HSL to musical properties
+    var pitchClass = musicTheory.GetPitchClassFromHue(hsl.H);
+    var mode = musicTheory.GetCombinedModeAndExtension(hsl.S, hsl.L);
+    // Build MIDI notes and frequencies
+    var (midiNotes, frequencies) = chordBuilder.BuildMusicalProperties(pitchClass, mode);
+    // Return the output model
+    return Results.Ok(new ChordOutputModel(
+        input.ColorValue,
+        hsl,
+        pitchClass,
+        mode,
+        midiNotes,
+        frequencies
+    ));
+});
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
