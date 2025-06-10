@@ -5,17 +5,13 @@ using System.Threading.Tasks;
 
 namespace SoundPalette.Api.Services
 {
-    public class IMusicTheoryService
+    // Interface for mapping HSL values to musical properties.
+    public interface IMusicTheoryService
     {
-        // Interface for mapping HSL values to musical properties.
-        public interface IMusicTheory
-        {
-            // Maps a hue value (0-360) to a musical pitch class (e.g., C, D♭, E).
-            string GetPitchClassFromHue(int hue);
+        // Maps a hue value (0-360) to a musical pitch class (e.g., C, D♭, E).
+        string GetPitchClassFromHue(int hue);
 
-            // Determines chord mode and extension (e.g., major-7) from saturation and lightness.
-            string GetCombinedModeAndExtension(int saturation, int lightness);
-        }
-
+        // Determines chord mode and extension (e.g., major-7) from saturation and lightness.
+        string GetCombinedModeAndExtension(int saturation, int lightness);
     }
 }

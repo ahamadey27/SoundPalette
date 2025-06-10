@@ -5,10 +5,13 @@ using System.Threading.Tasks;
 
 namespace SoundPalette.Api.Models
 {
-    public class ChordOutputModel
-    {
-        public record HslOutput(int h, int s, int l); // For nested HSL in output
-        public record ChordOutput(string Hex, HslOutput Hsl, string PitchClass, string Mode, int MidiNotes, double FrequencyHz);
-
-    }
+    // Represents the output of the chord conversion.
+    public record ChordOutputModel(
+        string Hex,
+        HslColorModel Hsl,
+        string PitchClass,
+        string Mode,
+        int[] MidiNotes,
+        double[] FrequencyHz
+    );
 }

@@ -1,13 +1,10 @@
 using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Threading.Tasks;
-using SoundPalette.Api.Models;
 
 namespace SoundPalette.Api.Models
 {
-    public class ColorParser
+    // Implements color parsing and conversion to HSL.
+    public class ColorParser : IColorParser
     {
         //Service responsible for parsing HEX color strings and converting them to HSL.
         public HslColorModel ParseToHsl(string hex)
