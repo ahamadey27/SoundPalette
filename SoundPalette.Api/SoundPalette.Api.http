@@ -1,0 +1,6 @@
+@SoundPalette.Api_HostAddress = http://localhost:5272
+
+GET {{SoundPalette.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
