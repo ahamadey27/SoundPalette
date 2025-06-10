@@ -21,4 +21,6 @@ how the program is working from an intermediate student's standpoint
 * Follow the spec.md sheet as your main guide and use the Outline.md sheet to reference for more details
 * For each instruction, please also include the code I should implement in addition to the Instructions and explanation.
 
+- Do not name classes and methods the same in C#. For example, avoid having a class named `MusicTheoryService` and a method named `MusicTheoryService` in the same file. Use clear, distinct names for each class and method to prevent confusion and errors.
+
 

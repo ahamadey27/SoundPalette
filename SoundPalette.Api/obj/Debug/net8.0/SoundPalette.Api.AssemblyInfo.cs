@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SoundPalette.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+160193251a23b406a6e36872fe0284e7e787c94a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+494bdb29077932cc413e0997d32139b05aa3ffe9")]
 [assembly: System.Reflection.AssemblyProductAttribute("SoundPalette.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SoundPalette.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
